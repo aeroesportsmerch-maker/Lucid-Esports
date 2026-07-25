@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viewz Merch</title>
+<title>Lucid Esports</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,149 +13,186 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,sans-serif;
+font-family:'Orbitron',sans-serif;
 }
 
 body{
-background:#0b0b0b;
+background:#050505;
 color:white;
+overflow-x:hidden;
 }
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 8%;
-background:#111;
+padding:20px 10%;
+background:rgba(0,0,0,.8);
 position:sticky;
 top:0;
+backdrop-filter:blur(10px);
+z-index:999;
 }
 
 .logo{
-font-size:32px;
-font-weight:700;
-color:#a855f7;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+height:70px;
 }
 
 nav a{
-margin-left:25px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+margin-left:30px;
 transition:.3s;
 }
 
 nav a:hover{
-color:#a855f7;
+color:#00bfff;
 }
 
 .hero{
-height:80vh;
+height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-url("https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=80");
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
 }
 
+.hero img{
+width:350px;
+margin-bottom:30px;
+filter:drop-shadow(0 0 20px #00bfff);
+}
+
 .hero h1{
-font-size:60px;
-margin-bottom:20px;
+font-size:70px;
+color:#fff;
+text-shadow:0 0 25px #00bfff;
 }
 
 .hero p{
+margin-top:20px;
 font-size:22px;
-opacity:.8;
-margin-bottom:35px;
+color:#ccc;
+}
+
+.buttons{
+margin-top:40px;
 }
 
 .btn{
-padding:15px 40px;
-background:#a855f7;
-border:none;
-border-radius:8px;
+display:inline-block;
+padding:15px 35px;
+margin:10px;
+background:#00bfff;
 color:white;
-font-size:18px;
-cursor:pointer;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
 transition:.3s;
+box-shadow:0 0 20px #00bfff;
 }
 
 .btn:hover{
-background:#9333ea;
+transform:scale(1.08);
+background:#9b4dff;
+box-shadow:0 0 30px #9b4dff;
 }
 
-.products{
-padding:80px 8%;
+section{
+padding:80px 10%;
 }
 
-.products h2{
-text-align:center;
-margin-bottom:50px;
+h2{
 font-size:42px;
+margin-bottom:40px;
+text-align:center;
+color:#00bfff;
 }
 
-.grid{
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:35px;
+gap:30px;
 }
 
 .card{
-background:#181818;
-border-radius:12px;
-overflow:hidden;
+background:#111;
+padding:25px;
+border-radius:20px;
+text-align:center;
 transition:.3s;
+border:1px solid #222;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
+box-shadow:0 0 20px #00bfff;
 }
 
 .card img{
 width:100%;
-height:300px;
-object-fit:cover;
-}
-
-.info{
-padding:20px;
+border-radius:15px;
+margin-bottom:20px;
 }
 
 .price{
-font-size:24px;
-color:#a855f7;
+color:#00bfff;
+font-size:22px;
 margin:15px 0;
 }
 
-button{
-width:100%;
-padding:15px;
-background:#a855f7;
-border:none;
+.buy{
+display:inline-block;
+padding:12px 25px;
+background:#9b4dff;
+border-radius:40px;
+text-decoration:none;
 color:white;
-font-size:17px;
-cursor:pointer;
 }
 
-.cart{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#a855f7;
-padding:15px 20px;
-border-radius:50px;
-font-weight:bold;
-cursor:pointer;
+.team-member{
+padding:20px;
+background:#111;
+border-radius:15px;
+text-align:center;
 }
 
 footer{
+background:#000;
 padding:40px;
 text-align:center;
-background:#111;
-margin-top:80px;
+color:#888;
+margin-top:50px;
+}
+
+.socials a{
+margin:10px;
+color:#00bfff;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero img{
+width:220px;
+}
+
 }
 
 </style>
@@ -166,87 +203,77 @@ margin-top:80px;
 
 <header>
 
-<div class="logo">VIEWZ</div>
+<div class="logo">
+<img src="logo.png" alt="Lucid Logo">
+<h2>LUCID ESPORTS</h2>
+</div>
 
 <nav>
 <a href="#">Home</a>
-<a href="#shop">Shop</a>
-<a href="#">Contact</a>
+<a href="#merch">Merch</a>
+<a href="#team">Team</a>
+<a href="#about">About</a>
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h1>VIEWZ MERCH</h1>
+<img src="logo.png" alt="Logo">
 
-<p>Official Apparel & Accessories</p>
+<h1>LUCID ESPORTS</h1>
 
-<a href="#shop">
-<button class="btn">
-Shop Now
-</button>
-</a>
+<p>DOMINATE • COMPETE • INSPIRE</p>
+
+<div class="buttons">
+
+<a href="#merch" class="btn">Shop Merch</a>
+
+<a href="#" class="btn">Join Discord</a>
+
+</div>
 
 </section>
 
-<section class="products" id="shop">
+<section id="merch">
 
-<h2>Featured Products</h2>
+<h2>Official Merch</h2>
 
-<div class="grid">
+<div class="cards">
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80">
+<img src="https://placehold.co/400x400?text=Hoodie">
 
-<div class="info">
+<h3>Lucid Hoodie</h3>
 
-<h3>Viewz Hoodie</h3>
+<p class="price">$49.99</p>
 
-<div class="price">$45</div>
-
-<button onclick="addCart(45)">
-Add To Cart
-</button>
-
-</div>
+<a href="#" class="buy">Buy Now</a>
 
 </div>
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80">
+<img src="https://placehold.co/400x400?text=Jersey">
 
-<div class="info">
+<h3>Team Jersey</h3>
 
-<h3>Viewz Tee</h3>
+<p class="price">$59.99</p>
 
-<div class="price">$30</div>
-
-<button onclick="addCart(30)">
-Add To Cart
-</button>
-
-</div>
+<a href="#" class="buy">Buy Now</a>
 
 </div>
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80">
+<img src="https://placehold.co/400x400?text=Mousepad">
 
-<div class="info">
+<h3>Gaming Mousepad</h3>
 
-<h3>Viewz Hat</h3>
+<p class="price">$24.99</p>
 
-<div class="price">$25</div>
-
-<button onclick="addCart(25)">
-Add To Cart
-</button>
-
-</div>
+<a href="#" class="buy">Buy Now</a>
 
 </div>
 
@@ -254,29 +281,81 @@ Add To Cart
 
 </section>
 
-<div class="cart">
-🛒 Cart: $<span id="total">0</span>
+<section id="team">
+
+<h2>Meet The Team</h2>
+
+<div class="cards">
+
+<div class="team-member">
+
+<h3>Captain</h3>
+
+<p>Coming Soon</p>
+
 </div>
+
+<div class="team-member">
+
+<h3>Player</h3>
+
+<p>Coming Soon</p>
+
+</div>
+
+<div class="team-member">
+
+<h3>Content Creator</h3>
+
+<p>Coming Soon</p>
+
+</div>
+
+<div class="team-member">
+
+<h3>Coach</h3>
+
+<p>Coming Soon</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About Lucid Esports</h2>
+
+<p style="text-align:center;max-width:900px;margin:auto;font-size:20px;color:#ccc;">
+Lucid Esports is a competitive gaming organization built around teamwork,
+dedication, and excellence. We compete at the highest level while creating
+content and building an amazing community for our fans.
+</p>
+
+</section>
 
 <footer>
 
-© 2026 Viewz. All Rights Reserved.
+<h3>LUCID ESPORTS</h3>
+
+<p>© 2025 Lucid Esports. All Rights Reserved.</p>
+
+<div class="socials">
+
+<a href="#">Discord</a>
+
+<a href="#">YouTube</a>
+
+<a href="#">TikTok</a>
+
+<a href="#">Instagram</a>
+
+<a href="#">X</a>
+
+</div>
 
 </footer>
-
-<script>
-
-let total=0;
-
-function addCart(price){
-
-total+=price;
-
-document.getElementById("total").innerHTML=total;
-
-}
-
-</script>
 
 </body>
 </html>
